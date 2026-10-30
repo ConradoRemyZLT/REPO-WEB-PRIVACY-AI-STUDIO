@@ -1,0 +1,7 @@
+{
+  "_nota": "Descargas: cada PDF se embebe UNA sola vez y el JS arma los links (data-dl) con un blob. El nombre de archivo lo da el atributo download de cada link.",
+  "brochure": "brochures/privacy-ai-studio-brochure-es.pdf",
+  "op_judicial": "brochures/one-pager-poder-judicial.pdf",
+  "op_estado": "brochures/one-pager-organismos-publicos.pdf",
+  "op_rrhh": "brochures/one-pager-rrhh.pdf"
+}

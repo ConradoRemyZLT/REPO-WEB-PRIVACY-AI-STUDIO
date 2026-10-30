@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Privacy AI Studio · IA generativa con datos confidenciales protegidos | by Puzzle AI</title>
+<meta name="description" content="Privacy AI Studio, de Puzzle AI: plataforma on-premise para anonimizar documentos, transcribir audio y video y usar IA generativa con datos confidenciales. Trazable y auditable. Para Poder Judicial, organismos públicos y RRHH.">
+<!--robots-->
+<link rel="canonical" href="{{link:web}}">
+<meta name="author" content="Puzzle AI">
+<meta name="publisher" content="Puzzle AI">
+<meta name="theme-color" content="#021444">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Privacy AI Studio">
+<meta property="og:title" content="Privacy AI Studio · by Puzzle AI">
+<meta property="og:description" content="La plataforma más completa para proteger datos confidenciales al usar IA. On-premise · Trazable · Auditable.">
+<meta property="og:url" content="{{link:web}}">
+<meta property="og:image" content="asset:iconos/web/og-privacy-ai-studio.jpg">
+<meta property="og:locale" content="es_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="asset:iconos/web/favicon-32.png">
+<link rel="apple-touch-icon" href="asset:iconos/web/apple-touch-icon-180.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"#puzzle","name":"Puzzle AI","alternateName":"Puzzle AI Agents","url":"https://thepuzzle.ai/","email":"hello@thepuzzle.ai"},{"@type":"SoftwareApplication","name":"Privacy AI Studio","applicationCategory":"BusinessApplication","operatingSystem":"On-premise","url":"https://www.privacyaistudio.com/","description":"Plataforma on-premise para anonimizar documentos, transcribir audio y video localmente y usar IA generativa sobre datos confidenciales con trazabilidad y auditoría.","creator":{"@id":"#puzzle"},"publisher":{"@id":"#puzzle"},"audience":[{"@type":"Audience","audienceType":"Poder Judicial"},{"@type":"Audience","audienceType":"Organismos públicos"},{"@type":"Audience","audienceType":"Recursos Humanos"}],"award":["Premio de Privacidad y Protección de Datos en Iberoamérica (RIPD · AEPD) 2025","1° puesto LatamDigital 2026 · Ciberseguridad"]}]}</script>
+<style><!--css--></style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-leak" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"/><path d="M14 3v5h5"/><path d="M19 8v4"/><path d="M15 17h6m-2.5-2.5L21 17l-2.5 2.5"/></g></symbol>
+  <symbol id="i-law" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0L5 7zM19 7l-3 6a3 3 0 0 0 6 0l-3-6z"/></g></symbol>
+  <symbol id="i-blind" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.6-3.4 8.3-8 9-4.6-.7-8-4.4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></g></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 10v4M7 7v10M11 4v16M15 8v8M19 6v12"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></g></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01M11 7.5h6M11 16.5h6"/></g></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.8 3.2-6 6.5-6s5.9 2.2 6.5 6"/><path d="M15.5 11l2 2 4-4"/></g></symbol>
+  <symbol id="i-log" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></g></symbol>
+  <symbol id="i-hybrid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7.5l2.8 8M16 7.5l-2.8 8M8.5 6h7"/></g></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v5"/></g></symbol>
+  <symbol id="i-unlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7H7a5 5 0 0 0 0 10h2M15 7h2a5 5 0 0 1 0 10h-2"/><path d="M8 12h8"/></g></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></g></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10.5 13.5M21 3l-6.5 18-4-8-8-4L21 3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div id="loader" aria-hidden="true">
+  <img src="asset:logos/privacy-ai-studio-claro.png" alt="" width="389" height="101">
+  <span class="ld-bar"><i></i></span>
+</div>
+
+<div id="sprog" aria-hidden="true"><i></i></div>
+
+<header class="hdr" id="hdr">
+  <a class="hlogo" href="#hero" aria-label="Privacy AI Studio — inicio"><img src="asset:logos/privacy-ai-studio-claro.png" alt="Privacy AI Studio by Puzzle AI" width="389" height="101"></a>
+  <nav class="menu" aria-label="Principal">
+    <div class="mi" data-menu><button class="tl" aria-expanded="false"><span class="l-es">Plataforma</span><span class="l-en">Platform</span><svg class="car"><use href="#i-car"/></svg></button>
+      <div class="panel"><div class="pinner">
+        <a class="leaf" href="#flujo"><b><span class="l-es">Cómo funciona</span><span class="l-en">How it works</span></b><small><span class="l-es">Proteger primero, procesar después</span><span class="l-en">Protect first, process later</span></small></a>
+        <a class="leaf" href="#anonimizacion"><b><em>01</em><span class="l-es">Anonimización</span><span class="l-en">Anonymization</span></b><small><span class="l-es">PDF, Word, ODT e imágenes</span><span class="l-en">PDF, Word, ODT and images</span></small></a>
+        <a class="leaf" href="#transcripcion"><b><em>02</em><span class="l-es">Transcripción</span><span class="l-en">Transcription</span></b><small><span class="l-es">Audio y video, 100% local</span><span class="l-en">Audio and video, 100% local</span></small></a>
+        <a class="leaf" href="#chat-ia"><b><em>03</em><span class="l-es">Chat IA</span><span class="l-en">AI Chat</span></b><small><span class="l-es">IA generativa en entorno controlado</span><span class="l-en">Generative AI in a controlled environment</span></small></a>
+      </div></div></div>
+    <div class="mi" data-menu><button class="tl" aria-expanded="false"><span class="l-es">Para quién</span><span class="l-en">Who it's for</span><svg class="car"><use href="#i-car"/></svg></button>
+      <div class="panel"><div class="pinner">
+        <a class="leaf" href="#sectores" data-sector="judicial"><b><span class="l-es">Poder Judicial</span><span class="l-en">Judiciary</span></b><small><span class="l-es">Expedientes y audiencias</span><span class="l-en">Case files and hearings</span></small></a>
+        <a class="leaf" href="#sectores" data-sector="estado"><b><span class="l-es">Organismos públicos</span><span class="l-en">Public sector</span></b><small><span class="l-es">Ministerios, poderes y organismos</span><span class="l-en">Ministries, branches and agencies</span></small></a>
+        <a class="leaf" href="#sectores" data-sector="rrhh"><b><span class="l-es">Recursos Humanos</span><span class="l-en">Human Resources</span></b><small><span class="l-es">Legajos, evaluaciones y entrevistas</span><span class="l-en">Records, reviews and interviews</span></small></a>
+      </div></div></div>
+    <div class="mi" data-menu><button class="tl" aria-expanded="false"><span class="l-es">Por qué Privacy</span><span class="l-en">Why Privacy</span><svg class="car"><use href="#i-car"/></svg></button>
+      <div class="panel"><div class="pinner">
+        <a class="leaf" href="#diferenciadores"><b><span class="l-es">Diferenciadores</span><span class="l-en">Differentiators</span></b></a>
+        <a class="leaf" href="#resultados"><b><span class="l-es">Resultados</span><span class="l-en">Results</span></b></a>
+        <a class="leaf" href="#implementacion"><b><span class="l-es">Implementación y soporte</span><span class="l-en">Deployment and support</span></b></a>
+        <a class="leaf" href="#reconocimientos"><b><span class="l-es">Reconocimientos</span><span class="l-en">Awards</span></b></a>
+      </div></div></div>
+    <div class="mi"><a class="tl" href="#puzzle">Puzzle AI</a></div>
+    <div class="mi"><a class="tl" href="#contacto"><span class="l-es">Contacto</span><span class="l-en">Contact</span></a></div>
+  </nav>
+  <div class="hdr-r">
+    <a class="hdr-dl" href="#descargas" data-dl="brochure" download="Privacy-AI-Studio-Brochure.pdf" title="Brochure (PDF)"><svg><use href="#i-down"/></svg><span>Brochure</span></a>
+    <div class="langsel" id="langsel">
+      <button class="lang-btn" id="langbtn" aria-label="Idioma / Language" aria-expanded="false"><span class="l-es">ES</span><span class="l-en">EN</span><svg class="car"><use href="#i-car"/></svg></button>
+      <div class="lang-menu" role="menu"><button data-lang="es" role="menuitem">Español</button><button data-lang="en" role="menuitem">English</button></div>
+    </div>
+    <a class="btn btn-solid btn-sm hdr-cta" href="#contacto"><span class="l-es">Solicitar demo</span><span class="l-en">Request a demo</span></a>
+    <button class="mbtn" id="mbtn" aria-label="Menú" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<div class="mov" id="mov">
+  <div class="m-h"><span class="l-es">Plataforma</span><span class="l-en">Platform</span></div>
+  <a href="#flujo"><span class="l-es">Cómo funciona</span><span class="l-en">How it works</span></a>
+  <a href="#anonimizacion"><em>01</em><span class="l-es">Anonimización</span><span class="l-en">Anonymization</span></a>
+  <a href="#transcripcion"><em>02</em><span class="l-es">Transcripción</span><span class="l-en">Transcription</span></a>
+  <a href="#chat-ia"><em>03</em><span class="l-es">Chat IA</span><span class="l-en">AI Chat</span></a>
+  <div class="m-h"><span class="l-es">Para quién</span><span class="l-en">Who it's for</span></div>
+  <a href="#sectores" data-sector="judicial"><span class="l-es">Poder Judicial</span><span class="l-en">Judiciary</span></a>
+  <a href="#sectores" data-sector="estado"><span class="l-es">Organismos públicos</span><span class="l-en">Public sector</span></a>
+  <a href="#sectores" data-sector="rrhh"><span class="l-es">Recursos Humanos</span><span class="l-en">Human Resources</span></a>
+  <div class="m-h"><span class="l-es">Por qué Privacy</span><span class="l-en">Why Privacy</span></div>
+  <a href="#diferenciadores"><span class="l-es">Diferenciadores</span><span class="l-en">Differentiators</span></a>
+  <a href="#resultados"><span class="l-es">Resultados</span><span class="l-en">Results</span></a>
+  <a href="#implementacion"><span class="l-es">Implementación y soporte</span><span class="l-en">Deployment and support</span></a>
+  <a href="#reconocimientos"><span class="l-es">Reconocimientos</span><span class="l-en">Awards</span></a>
+  <div class="m-h">&nbsp;</div>
+  <a href="#puzzle">Puzzle AI</a>
+  <a href="#contacto"><span class="l-es">Contacto</span><span class="l-en">Contact</span></a>
+  <div class="m-ctas">
+    <a class="btn btn-solid" href="#contacto"><span class="l-es">Solicitar demo</span><span class="l-en">Request a demo</span></a>
+    <a class="btn btn-ghost" href="#descargas" data-dl="brochure" download="Privacy-AI-Studio-Brochure.pdf"><svg><use href="#i-down"/></svg><span class="l-es">Brochure</span><span class="l-en">Brochure (ES)</span></a>
+  </div>
+</div>
+
+<main>
+
+<!-- ═════════ HERO ═════════ -->
+<section id="hero" class="hero">
+  <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="asset:videos/fondo-hero-poster.webp" aria-hidden="true"><source src="asset:videos/fondo-hero.mp4" type="video/mp4"></video>
+  <div class="hero-shade"></div>
+  <div class="redact" aria-hidden="true">
+    <span class="rk" style="--x:64%;--y:11%" data-es="[PERSONA_1]" data-en="[PERSON_1]">María Laura Gómez</span>
+    <span class="rk" style="--x:83%;--y:19%" data-es="[DNI_1]" data-en="[ID_1]">DNI 28.456.789</span>
+    <span class="rk" style="--x:61%;--y:53%" data-es="[EXPEDIENTE_1]" data-en="[CASE_1]">Expte. 4521/2025</span>
+    <span class="rk" style="--x:81%;--y:49%" data-es="[DOMICILIO_1]" data-en="[ADDRESS_1]">Av. Corrientes 1234</span>
+    <span class="rk" style="--x:58%;--y:68%" data-es="[TELEFONO_1]" data-en="[PHONE_1]">11 4567-8910</span>
+    <span class="rk" style="--x:77%;--y:66%" data-es="[PERSONA_2]" data-en="[PERSON_2]">Dr. Martín Ruiz</span>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow" data-reveal="fade"><span class="l-es">Plataforma de IA privada · by Puzzle AI</span><span class="l-en">Private AI platform · by Puzzle AI</span></div>
+    <h1 class="hero-title"><span class="hline" style="--d:.1s"><span class="l-es">La plataforma más completa</span><span class="l-en">The most complete platform</span></span><span class="hline" style="--d:.2s"><span class="l-es">para proteger <span class="chrome">datos confidenciales</span></span><span class="l-en">to protect <span class="chrome">confidential data</span></span></span></h1>
+    <p class="hero-sub" data-reveal="up" style="--d:.34s"><span class="l-es">Usá inteligencia artificial generativa sobre documentos, audios y videos sin que tu información salga de tu organización.</span><span class="l-en">Use generative AI on documents, audio and video without your information ever leaving your organization.</span></p>
+    <ul class="pills" data-reveal="up" style="--d:.44s"><li>On-premise</li><li><span class="l-es">Trazable</span><span class="l-en">Traceable</span></li><li><span class="l-es">Auditable</span><span class="l-en">Auditable</span></li></ul>
+    <div class="hero-cta" data-reveal="up" style="--d:.54s">
+      <a class="btn btn-solid" href="#contacto"><span class="l-es">Solicitar demo</span><span class="l-en">Request a demo</span><svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#descargas" data-dl="brochure" download="Privacy-AI-Studio-Brochure.pdf"><svg><use href="#i-down"/></svg><span class="l-es">Descargar brochure</span><span class="l-en">Download brochure (ES)</span></a>
+    </div>
+  </div>
+  <div class="wrap hero-foot" data-reveal="fade" style="--d:.7s">
+    <div class="credits">
+      <div class="cred"><small><span class="l-es">Diseñado por</span><span class="l-en">Designed by</span></small><img src="asset:logos/ialab-uba.png" alt="IALAB · Facultad de Derecho, UBA" width="285" height="66"><span class="cred-n"><span class="l-es">Facultad de Derecho · UBA</span><span class="l-en">School of Law · UBA</span></span></div>
+      <div class="cred"><small><span class="l-es">Desarrollado por</span><span class="l-en">Developed by</span></small><img class="cred-pz" src="asset:logos/puzzle-ai.png" alt="Puzzle AI" width="159" height="45"></div>
+    </div>
+    <div class="laurels">
+      <img src="asset:premios/premio-ripd-aepd-2025.webp" alt="Premio de Privacidad y Protección de Datos en Iberoamérica · AEPD 2025" width="520" height="447">
+      <img src="asset:premios/premio-latamdigital-2026.webp" alt="1° puesto LatamDigital 2026 · Ciberseguridad" width="520" height="446">
+    </div>
+  </div>
+  <a href="#audiencia" class="scrollcue" aria-label="Ir al contenido"><svg><use href="#i-car"/></svg></a>
+</section>
+
+<!-- ═════════ PÚBLICO ═════════ -->
+<section id="audiencia" class="band-aud">
+  <div class="wrap aud">
+    <p class="aud-t" data-reveal="up"><span class="l-es">Para organizaciones donde la confidencialidad <b>no es opcional</b></span><span class="l-en">For organizations where confidentiality <b>is not optional</b></span></p>
+    <div class="aud-list">
+      <a href="#sectores" data-sector="judicial" data-reveal="up" style="--d:.06s"><svg><use href="#i-law"/></svg><span class="l-es">Poder Judicial</span><span class="l-en">Judiciary</span></a>
+      <a href="#sectores" data-sector="estado" data-reveal="up" style="--d:.12s"><svg><use href="#i-server"/></svg><span class="l-es">Organismos públicos</span><span class="l-en">Public sector</span></a>
+      <a href="#sectores" data-sector="rrhh" data-reveal="up" style="--d:.18s"><svg><use href="#i-user"/></svg><span class="l-es">Recursos Humanos</span><span class="l-en">Human Resources</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ PROBLEMA ═════════ -->
+<section id="problema" class="sec dark">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="up"><span class="l-es">El problema</span><span class="l-en">The problem</span></div>
+    <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">Tu equipo ya usa IA. ¿Sabés con qué datos?</span><span class="l-en">Your team already uses AI. Do you know with what data?</span></h2>
+    <div class="grid3">
+      <article class="glass card" data-reveal="up" style="--d:.08s"><span class="ico"><svg><use href="#i-leak"/></svg></span><h3><span class="l-es">Fuga invisible</span><span class="l-en">Invisible leakage</span></h3><p><span class="l-es">Cada vez que alguien copia un contrato o expediente en ChatGPT u otra IA pública, esos datos salen de tu organización sin dejar rastro.</span><span class="l-en">Every time someone pastes a contract or case file into ChatGPT or another public AI, that data leaves your organization without a trace.</span></p></article>
+      <article class="glass card" data-reveal="up" style="--d:.16s"><span class="ico"><svg><use href="#i-law"/></svg></span><h3><span class="l-es">Riesgo normativo</span><span class="l-en">Regulatory risk</span></h3><p><span class="l-es">La Ley 25.326 y normativas internacionales exigen demostrar cómo se tratan los datos confidenciales. El uso informal de IA no lo permite.</span><span class="l-en">Argentina's Data Protection Law 25.326 and international regulations require you to prove how confidential data is handled. Informal AI use makes that impossible.</span></p></article>
+      <article class="glass card" data-reveal="up" style="--d:.24s"><span class="ico"><svg><use href="#i-blind"/></svg></span><h3><span class="l-es">Sin control ni auditoría</span><span class="l-en">No control, no audit</span></h3><p><span class="l-es">No sabés quién envió qué ni cuándo. No podés auditar el uso de IA en tu organización ni demostrar cumplimiento.</span><span class="l-en">You don't know who sent what, or when. You can't audit AI use in your organization or demonstrate compliance.</span></p></article>
+    </div>
+    <p class="shadow-ai" data-reveal="up"><span class="l-es">Esto tiene nombre: <b>Shadow AI</b>. Y la solución se llama <b class="chrome">Privacy AI Studio</b>.</span><span class="l-en">This has a name: <b>Shadow AI</b>. And the solution is called <b class="chrome">Privacy AI Studio</b>.</span></p>
+  </div>
+</section>
+
+<!-- ═════════ FLUJO ═════════ -->
+<section id="flujo" class="sec dark deep">
+  <img class="deco deco-shape" src="asset:graficos/forma-cromada.webp" alt="" aria-hidden="true" width="807" height="806">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="up"><span class="l-es">Cómo funciona</span><span class="l-en">How it works</span></div>
+    <h2 class="h2 h2-xl" data-reveal="up" style="--d:.05s"><span class="l-es">Un flujo diseñado para <span class="chrome">proteger primero, procesar después.</span></span><span class="l-en">A workflow designed to <span class="chrome">protect first, process later.</span></span></h2>
+    <p class="lead" data-reveal="up" style="--d:.1s"><span class="l-es">Privacy AI Studio combina tres módulos que trabajan en secuencia: primero protegés la información, después la procesás con IA, y cada paso queda registrado.</span><span class="l-en">Privacy AI Studio combines three modules that work in sequence: first you protect the information, then you process it with AI, and every step is logged.</span></p>
+    <ol class="flow" data-reveal="up" style="--d:.15s">
+      <li><a href="#anonimizacion" class="glass fnode"><em>01</em><svg><use href="#i-shield"/></svg><b><span class="l-es">Anonimización</span><span class="l-en">Anonymization</span></b><small><span class="l-es">Detecta y protege datos personales y sensibles</span><span class="l-en">Detects and protects personal and sensitive data</span></small></a></li>
+      <li><a href="#transcripcion" class="glass fnode"><em>02</em><svg><use href="#i-wave"/></svg><b><span class="l-es">Transcripción</span><span class="l-en">Transcription</span></b><small><span class="l-es">Audio y video a texto, sin salir de tu servidor</span><span class="l-en">Audio and video to text, without leaving your server</span></small></a></li>
+      <li><a href="#chat-ia" class="glass fnode"><em>03</em><svg><use href="#i-chat"/></svg><b><span class="l-es">Chat IA</span><span class="l-en">AI Chat</span></b><small><span class="l-es">IA generativa sobre contenido ya protegido</span><span class="l-en">Generative AI on already-protected content</span></small></a></li>
+    </ol>
+    <div class="audit-rail" data-reveal="up" style="--d:.22s"><span class="pulse"></span><svg><use href="#i-log"/></svg><span class="l-es">Registro de auditoría: usuario · documento · modelo · tokens · timestamp</span><span class="l-en">Audit log: user · document · model · tokens · timestamp</span><span class="rail-live" aria-hidden="true"></span></div>
+  </div>
+</section>
+
+<!-- ═════════ MÓDULO 01 ═════════ -->
+<section id="anonimizacion" class="sec dark mod">
+  <div class="wrap mod-grid">
+    <div class="mod-copy">
+      <div class="eyebrow" data-reveal="up"><span class="l-es">Módulo 01</span><span class="l-en">Module 01</span></div>
+      <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">Anonimización de documentos</span><span class="l-en">Document anonymization</span></h2>
+      <p class="lead" data-reveal="up" style="--d:.1s"><span class="l-es">Admite PDF, Word, ODT e imágenes. Detecta y protege datos personales o sensibles usando IA no generativa y patrones configurables por proyecto, con revisión humana antes de cualquier exportación.</span><span class="l-en">Supports PDF, Word, ODT and images. Detects and protects personal or sensitive data using non-generative AI and project-configurable patterns, with human review before any export.</span></p>
+      <ol class="steps" data-reveal="up" style="--d:.14s">
+        <li><em>01</em><span class="l-es">Creás el catálogo de entidades a anonimizar</span><span class="l-en">You build the catalog of entities to anonymize</span></li>
+        <li><em>02</em><span class="l-es">Cargás el documento (<b>drag &amp; drop</b>)</span><span class="l-en">You upload the document (<b>drag &amp; drop</b>)</span></li>
+        <li><em>03</em><span class="l-es">El sistema detecta entidades confidenciales</span><span class="l-en">The system detects confidential entities</span></li>
+        <li><em>04</em><span class="l-es">Revisás y corregís en 3 vistas: original, anonimizado y ofuscado</span><span class="l-en">You review and correct in 3 views: original, anonymized and obfuscated</span></li>
+        <li><em>05</em><span class="l-es">Validás — <b>paso humano obligatorio</b></span><span class="l-en">You validate — <b>mandatory human step</b></span></li>
+        <li><em>06</em><span class="l-es">Exportás: PDF, Word o diccionario de anonimización</span><span class="l-en">You export: PDF, Word or anonymization dictionary</span></li>
+      </ol>
+    </div>
+    <div class="mod-demo" data-reveal="up" style="--d:.12s">
+      <div class="glass demo" id="anon-demo" data-view="orig">
+        <div class="demo-top">
+          <span class="demo-file"><svg><use href="#i-doc"/></svg>acta_comparecencia.pdf</span>
+          <div class="seg" role="tablist" aria-label="Vista">
+            <button role="tab" data-v="orig" aria-selected="true">Original</button>
+            <button role="tab" data-v="anon" aria-selected="false"><span class="l-es">Anonimizado</span><span class="l-en">Anonymized</span></button>
+            <button role="tab" data-v="obf" aria-selected="false"><span class="l-es">Ofuscado</span><span class="l-en">Obfuscated</span></button>
+          </div>
+        </div>
+        <div class="demo-doc">
+          <p class="l-es">En la Ciudad de Buenos Aires, a los 12 días del mes de marzo de 2026, comparece la Sra. <span class="ent t-per" data-tag="[PERSONA_1]"><span class="v">María Laura Gómez</span></span>, DNI <span class="ent t-id" data-tag="[DNI_1]"><span class="v">28.456.789</span></span>, con domicilio en <span class="ent t-loc" data-tag="[DOMICILIO_1]"><span class="v">Av. Corrientes 1234</span></span>, en el marco del expediente N.º <span class="ent t-exp" data-tag="[EXPEDIENTE_1]"><span class="v">4521/2025</span></span>, representada por el Dr. <span class="ent t-per" data-tag="[PERSONA_2]"><span class="v">Martín Ruiz</span></span>, quien manifiesta que su teléfono de contacto es <span class="ent t-id" data-tag="[TELEFONO_1]"><span class="v">11 4567-8910</span></span>.</p>
+          <p class="l-en">In the City of Buenos Aires, on March 12, 2026, Ms. <span class="ent t-per" data-tag="[PERSON_1]"><span class="v">María Laura Gómez</span></span>, ID no. <span class="ent t-id" data-tag="[ID_1]"><span class="v">28.456.789</span></span>, residing at <span class="ent t-loc" data-tag="[ADDRESS_1]"><span class="v">Av. Corrientes 1234</span></span>, appears in case file no. <span class="ent t-exp" data-tag="[CASE_1]"><span class="v">4521/2025</span></span>, represented by <span class="ent t-per" data-tag="[PERSON_2]"><span class="v">Martín Ruiz</span></span>, Esq., who states that their contact phone number is <span class="ent t-id" data-tag="[PHONE_1]"><span class="v">11 4567-8910</span></span>.</p>
+        </div>
+        <div class="demo-legend">
+          <span class="lg t-per"><span class="l-es">Persona</span><span class="l-en">Person</span></span><span class="lg t-id"><span class="l-es">Identificador</span><span class="l-en">Identifier</span></span><span class="lg t-loc"><span class="l-es">Domicilio</span><span class="l-en">Address</span></span><span class="lg t-exp"><span class="l-es">Expediente</span><span class="l-en">Case file</span></span>
+        </div>
+        <div class="demo-foot">
+          <span class="vstate"><span class="dot"></span><span class="s-pend"><span class="l-es">6 entidades detectadas · pendiente de validación humana</span><span class="l-en">6 entities detected · pending human validation</span></span><span class="s-ok"><span class="l-es">Validado por una persona · listo para exportar</span><span class="l-en">Validated by a person · ready to export</span></span></span>
+          <button class="btn btn-solid btn-sm" id="anon-validate"><svg><use href="#i-check"/></svg><span class="l-es">Validar</span><span class="l-en">Validate</span></button>
+        </div>
+      </div>
+      <p class="demo-note"><span class="l-es">Ejemplo ilustrativo con datos ficticios.</span><span class="l-en">Illustrative example with fictitious data.</span></p>
+      <div class="io" data-reveal="up" style="--d:.16s">
+        <div class="glass io-col"><h4><span class="l-es">Formatos admitidos</span><span class="l-en">Supported formats</span></h4><ul><li>PDF</li><li>Word (.docx)</li><li>ODT</li><li><span class="l-es">Imágenes JPG / PNG</span><span class="l-en">JPG / PNG images</span></li></ul></div>
+        <div class="glass io-col"><h4><span class="l-es">Exportación disponible en</span><span class="l-en">Export available as</span></h4><ul><li><span class="l-es">PDF preservando layout</span><span class="l-en">Layout-preserving PDF</span></li><li><span class="l-es">PDF sin etiquetas (ofuscado)</span><span class="l-en">Untagged PDF (obfuscated)</span></li><li>Word (.docx)</li><li><span class="l-es">Diccionario de anonimización</span><span class="l-en">Anonymization dictionary</span></li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ MÓDULO 02 ═════════ -->
+<section id="transcripcion" class="sec dark mod deep">
+  <img class="deco deco-silk" src="asset:graficos/cinta-seda.webp" alt="" aria-hidden="true" width="616" height="1585">
+  <div class="wrap mod-grid rev">
+    <div class="mod-copy">
+      <div class="eyebrow" data-reveal="up"><span class="l-es">Módulo 02</span><span class="l-en">Module 02</span></div>
+      <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">Transcripción de audio y video</span><span class="l-en">Audio and video transcription</span></h2>
+      <p class="lead" data-reveal="up" style="--d:.1s"><span class="l-es">Transcripción 100% local. El audio nunca sale de tu infraestructura, ni para procesarse ni para almacenarse.</span><span class="l-en">100% local transcription. Audio never leaves your infrastructure — not for processing, not for storage.</span></p>
+      <div class="feats" data-reveal="up" style="--d:.14s">
+        <div><h4><span class="l-es">Diarización automática</span><span class="l-en">Automatic diarization</span></h4><p><span class="l-es">El sistema identifica y separa automáticamente a los distintos hablantes. Podés renombrarlos, unir segmentos o reasignarlos con un clic.</span><span class="l-en">The system automatically identifies and separates each speaker. You can rename them, merge segments or reassign them in one click.</span></p></div>
+        <div><h4><span class="l-es">Mapa de calor de confianza</span><span class="l-en">Confidence heat map</span></h4><p><span class="l-es">Cada palabra tiene un color según la confianza del modelo: verde (alta), amarillo (media), rojo (baja). Revisás primero donde más importa.</span><span class="l-en">Each word is colored by model confidence: green (high), yellow (medium), red (low). You review first where it matters most.</span></p></div>
+        <div><h4><span class="l-es">Sincronización inmediata</span><span class="l-en">Instant sync</span></h4><p><span class="l-es">Al hacer clic sobre cualquier texto, el reproductor salta automáticamente al momento exacto del audio o video. Sin latencia.</span><span class="l-en">Click any text and the player jumps to that exact moment in the audio or video. No lag.</span></p></div>
+        <div><h4><span class="l-es">Exportación con timecode</span><span class="l-en">Timecoded export</span></h4><p><span class="l-es">Descargá la transcripción en Word, con o sin marcas de tiempo. Ideal para contextos legales donde se necesita acreditar cada intervención.</span><span class="l-en">Download the transcript in Word, with or without timestamps. Ideal for legal contexts where every intervention must be on record.</span></p></div>
+      </div>
+      <ul class="chips" data-reveal="up" style="--d:.18s" aria-label="Formatos"><li>MP3</li><li>MP4</li><li>WAV</li><li>M4A</li><li>FLAC</li><li>OGG</li><li>WMV</li></ul>
+    </div>
+    <div class="mod-demo" data-reveal="up" style="--d:.12s">
+      <div class="glass demo tr" id="tr-demo">
+        <div class="demo-top">
+          <span class="demo-file"><svg><use href="#i-wave"/></svg><span class="l-es">audiencia_testimonial.mp4</span><span class="l-en">witness_hearing.mp4</span></span>
+          <span class="local"><svg><use href="#i-server"/></svg><span class="l-es">Procesado localmente</span><span class="l-en">Processed locally</span></span>
+        </div>
+        <div class="player"><button class="pbtn" aria-label="Reproducir"><svg><use href="#i-play"/></svg></button><div class="wave" aria-hidden="true"></div><span class="tc" id="tr-tc">00:00:04</span></div>
+        <div class="lines">
+          <div class="ln" data-t="4"><span class="tm">00:00:04</span><span class="spk s1"><span class="l-es">Juez</span><span class="l-en">Judge</span></span><p><span class="l-es">Se abre la audiencia. Se deja constancia de la presencia de las partes.</span><span class="l-en">The hearing is now open. Let the record show that the parties are present.</span></p></div>
+          <div class="ln" data-t="11"><span class="tm">00:00:11</span><span class="spk s2"><span class="l-es">Testigo</span><span class="l-en">Witness</span></span><p><span class="l-es">Llegué al lugar cerca de las <i class="c-mid">nueve y cuarto</i> y <i class="c-low">vi que</i> la puerta estaba abierta.</span><span class="l-en">I got there around <i class="c-mid">a quarter past nine</i> and <i class="c-low">saw that</i> the door was open.</span></p></div>
+          <div class="ln" data-t="19"><span class="tm">00:00:19</span><span class="spk s3"><span class="l-es">Defensa</span><span class="l-en">Defense</span></span><p><span class="l-es">¿Puede precisar si había otras personas presentes?</span><span class="l-en">Can you specify whether anyone else was present?</span></p></div>
+          <div class="ln" data-t="24"><span class="tm">00:00:24</span><span class="spk s2"><span class="l-es">Testigo</span><span class="l-en">Witness</span></span><p><span class="l-es">Sí, <i class="c-mid">dos</i> personas más, pero no las conocía.</span><span class="l-en">Yes, <i class="c-mid">two</i> other people, but I didn't know them.</span></p></div>
+        </div>
+        <div class="demo-legend conf"><span class="lg c-hi"><span class="l-es">Alta</span><span class="l-en">High</span></span><span class="lg c-mid"><span class="l-es">Media</span><span class="l-en">Medium</span></span><span class="lg c-low"><span class="l-es">Baja</span><span class="l-en">Low</span></span><span class="lg-t"><span class="l-es">Confianza del modelo</span><span class="l-en">Model confidence</span></span></div>
+      </div>
+      <p class="demo-note"><span class="l-es">Ejemplo ilustrativo. Hacé clic en una línea para saltar a ese momento.</span><span class="l-en">Illustrative example. Click a line to jump to that moment.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ MÓDULO 03 ═════════ -->
+<section id="chat-ia" class="sec dark mod">
+  <div class="wrap mod-grid">
+    <div class="mod-copy">
+      <div class="eyebrow" data-reveal="up"><span class="l-es">Módulo 03</span><span class="l-en">Module 03</span></div>
+      <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">IA generativa dentro del entorno controlado</span><span class="l-en">Generative AI inside a controlled environment</span></h2>
+      <p class="lead" data-reveal="up" style="--d:.1s"><span class="l-es">La organización define qué documentos pueden procesarse con IA, bajo qué condiciones y con qué controles. Cada interacción queda registrada.</span><span class="l-en">Your organization decides which documents can be processed with AI, under what conditions and with which controls. Every interaction is logged.</span></p>
+      <div class="feats one" data-reveal="up" style="--d:.14s">
+        <div><h4><span class="l-es">Asistente sobre documentos</span><span class="l-en">Document assistant</span></h4><p><span class="l-es">Consultá, resumí y analizá cualquier documento anonimizado directamente en la plataforma. Sin descargarlo ni salir del sistema.</span><span class="l-en">Query, summarize and analyze any anonymized document right inside the platform. No downloads, no leaving the system.</span></p></div>
+        <div><h4><span class="l-es">Chat general de IA</span><span class="l-en">General AI chat</span></h4><p><span class="l-es">Espacio de conversación libre para consultas, borradores o análisis. Puede trabajar sobre documentos internos ya protegidos o archivos externos.</span><span class="l-en">An open conversation space for questions, drafts or analysis. It can work on already-protected internal documents or external files.</span></p></div>
+        <div><h4><span class="l-es">Prompts-clic</span><span class="l-en">One-click prompts</span></h4><p><span class="l-es">Catálogo de acciones preconfiguradas para homogeneizar el uso de IA en la organización. Un clic ejecuta instrucciones sobre el documento activo.</span><span class="l-en">A catalog of preconfigured actions to standardize AI use across the organization. One click runs instructions on the active document.</span></p></div>
+      </div>
+    </div>
+    <div class="mod-demo" data-reveal="up" style="--d:.12s">
+      <div class="glass demo chat" id="chat-demo">
+        <div class="demo-top">
+          <span class="demo-file"><svg><use href="#i-doc"/></svg><span class="l-es">acta_comparecencia · anonimizado</span><span class="l-en">appearance_record · anonymized</span></span>
+        </div>
+        <div class="models" role="radiogroup" aria-label="Modelo">
+          <button role="radio" aria-checked="true" data-m="GPT">GPT</button><button role="radio" aria-checked="false" data-m="Claude">Claude</button><button role="radio" aria-checked="false" data-m="Gemini">Gemini</button><button role="radio" aria-checked="false" data-m="Mistral">Mistral</button><button role="radio" aria-checked="false" data-m="Local"><span class="l-es">Locales</span><span class="l-en">Local</span></button>
+        </div>
+        <div class="pclic">
+          <button data-p="0"><span class="l-es">Resumir</span><span class="l-en">Summarize</span></button><button data-p="1"><span class="l-es">Identificar partes</span><span class="l-en">Identify parties</span></button><button data-p="2"><span class="l-es">Extraer plazos</span><span class="l-en">Extract deadlines</span></button>
+        </div>
+        <div class="convo" id="chat-convo" aria-live="polite">
+          <div class="msg u"><span class="l-es">Resumí el acta en dos líneas.</span><span class="l-en">Summarize the record in two lines.</span></div>
+          <div class="msg a"><span class="l-es">Comparece [PERSONA_1], con domicilio en [DOMICILIO_1], en el expediente [EXPEDIENTE_1], representada por [PERSONA_2].</span><span class="l-en">[PERSON_1], residing at [ADDRESS_1], appears in case file [CASE_1], represented by [PERSON_2].</span></div>
+        </div>
+        <div class="alog">
+          <div class="alog-h"><svg><use href="#i-log"/></svg><span class="l-es">Registro de auditoría</span><span class="l-en">Audit log</span></div>
+          <table><thead><tr><th><span class="l-es">Hora</span><span class="l-en">Time</span></th><th><span class="l-es">Usuario</span><span class="l-en">User</span></th><th><span class="l-es">Modelo</span><span class="l-en">Model</span></th><th>Tokens</th></tr></thead><tbody id="alog-body"><tr><td>10:42:07</td><td>analista.03</td><td>GPT</td><td>412</td></tr></tbody></table>
+        </div>
+      </div>
+      <div class="glass anymodel" data-reveal="up" style="--d:.16s">
+        <h4><span class="l-es">Cualquier modelo de IA.</span><span class="l-en">Any AI model.</span></h4>
+        <p><span class="l-es">Privacy AI Studio se conecta vía API a cualquier proveedor: GPT, Claude, Gemini, Mistral, modelos locales y más. <b>Pagás por uso de API, no por licencia por usuario.</b> Escalá sin sobrecostos.</span><span class="l-en">Privacy AI Studio connects via API to any provider: GPT, Claude, Gemini, Mistral, local models and more. <b>You pay for API usage, not per-user licenses.</b> Scale without overruns.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ SECTORES ═════════ -->
+<section id="sectores" class="sec light">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="up"><span class="l-es">Para quién es</span><span class="l-en">Who it's for</span></div>
+    <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">Sectores donde la confidencialidad no es opcional.</span><span class="l-en">Sectors where confidentiality is not optional.</span></h2>
+    <div class="stabs" role="tablist" aria-label="Sector" data-reveal="up" style="--d:.1s">
+      <button role="tab" id="tab-judicial" aria-controls="sp-judicial" aria-selected="true" data-s="judicial"><svg><use href="#i-law"/></svg><span class="l-es">Poder Judicial</span><span class="l-en">Judiciary</span></button>
+      <button role="tab" id="tab-estado" aria-controls="sp-estado" aria-selected="false" data-s="estado"><svg><use href="#i-server"/></svg><span class="l-es">Organismos públicos</span><span class="l-en">Public sector</span></button>
+      <button role="tab" id="tab-rrhh" aria-controls="sp-rrhh" aria-selected="false" data-s="rrhh"><svg><use href="#i-user"/></svg><span class="l-es">Recursos Humanos</span><span class="l-en">Human Resources</span></button>
+    </div>
+
+    <div class="spanel on" id="sp-judicial" role="tabpanel" aria-labelledby="tab-judicial">
+      <div class="sp-head">
+        <div>
+          <h3 class="sp-t"><span class="l-es">Transcribí audiencias, anonimizá expedientes y trabajá con IA, sin que ningún dato salga de tu infraestructura.</span><span class="l-en">Transcribe hearings, anonymize case files and work with AI — without any data leaving your infrastructure.</span></h3>
+          <p><span class="l-es">Para organismos judiciales que necesitan incorporar inteligencia artificial a su trabajo diario con información confidencial, sin exponer datos de partes, testigos o causas, y con trazabilidad completa de cada operación.</span><span class="l-en">For judicial bodies that need to bring AI into their daily work with confidential information, without exposing data on parties, witnesses or cases, and with full traceability of every operation.</span></p>
+        </div>
+        <a class="op-card" href="#descargas" data-dl="op_judicial" download="Privacy-AI-Studio-Poder-Judicial.pdf"><img src="asset:fotos/op-poder-judicial.webp" alt="" width="367" height="520" loading="lazy"><span><svg><use href="#i-down"/></svg><span class="l-es">One-pager Poder Judicial</span><span class="l-en">Judiciary one-pager (ES)</span></span></a>
+      </div>
+      <ol class="sp-steps">
+        <li><em>01</em><h4><span class="l-es">Transcribís</span><span class="l-en">Transcribe</span></h4><p><span class="l-es">Audiencias, declaraciones y reuniones a texto, en forma completamente local. Diarización de hablantes, mapa de calor para revisión prioritaria y exportación con timecode para uso judicial.</span><span class="l-en">Hearings, statements and meetings to text, fully locally. Speaker diarization, heat map for priority review and timecoded export for judicial use.</span></p></li>
+        <li><em>02</em><h4><span class="l-es">Anonimizás</span><span class="l-en">Anonymize</span></h4><p><span class="l-es">Antes de que un documento o transcripción toque una IA, el sistema detecta nombres, domicilios, números de expediente e identificadores. Revisás, corregís y validás.</span><span class="l-en">Before any document or transcript touches an AI, the system detects names, addresses, case numbers and identifiers. You review, correct and validate.</span></p></li>
+        <li><em>03</em><h4><span class="l-es">Procesás con IA</span><span class="l-en">Process with AI</span></h4><p><span class="l-es">Con el contenido ya protegido, resumís, analizás, comparás o extraés información de causas, actas y expedientes. Cada interacción queda registrada.</span><span class="l-en">With content already protected, you summarize, analyze, compare or extract information from cases, records and files. Every interaction is logged.</span></p></li>
+      </ol>
+    </div>
+
+    <div class="spanel" id="sp-estado" role="tabpanel" aria-labelledby="tab-estado">
+      <div class="sp-head">
+        <div>
+          <h3 class="sp-t"><span class="l-es">El Estado también necesita usar IA, protegiendo sus datos.</span><span class="l-en">Governments need AI too — while protecting their data.</span></h3>
+          <p><span class="l-es">Ministerios, poderes y organismos del Estado gestionan información sensible a diario: expedientes, actas, legajos, grabaciones de sesiones y reuniones de gabinete. Privacy AI Studio permite incorporar IA a esos flujos sin que ningún dato salga de la infraestructura institucional, con registro de cada operación y en línea con las obligaciones de protección de datos del sector público.</span><span class="l-en">Ministries, branches and government agencies handle sensitive information every day: case files, minutes, personnel records, recordings of sessions and cabinet meetings. Privacy AI Studio brings AI into those workflows without any data leaving the institution's infrastructure, logging every operation in line with public-sector data protection obligations.</span></p>
+        </div>
+        <a class="op-card" href="#descargas" data-dl="op_estado" download="Privacy-AI-Studio-Organismos-Publicos.pdf"><img src="asset:fotos/op-organismos-publicos.webp" alt="" width="367" height="520" loading="lazy"><span><svg><use href="#i-down"/></svg><span class="l-es">One-pager Sector público</span><span class="l-en">Public sector one-pager (ES)</span></span></a>
+      </div>
+      <ol class="sp-steps">
+        <li><em>01</em><h4><span class="l-es">Anonimizás</span><span class="l-en">Anonymize</span></h4><p><span class="l-es">El sistema detecta datos de ciudadanos, funcionarios y terceros mencionados en actuaciones. Cada agente revisa y valida: ningún archivo se procesa sin aprobación humana.</span><span class="l-en">The system detects data on citizens, officials and third parties named in proceedings. Each agent reviews and validates: no file is processed without human approval.</span></p></li>
+        <li><em>02</em><h4><span class="l-es">Transcribís</span><span class="l-en">Transcribe</span></h4><p><span class="l-es">Sesiones legislativas, reuniones de gabinete y audiencias públicas a texto, en forma local, con identificación de hablantes y timecode. El audio nunca sale del servidor institucional.</span><span class="l-en">Legislative sessions, cabinet meetings and public hearings to text, locally, with speaker identification and timecodes. Audio never leaves the institutional server.</span></p></li>
+        <li><em>03</em><h4><span class="l-es">Procesás con IA bajo control institucional</span><span class="l-en">Process with AI under institutional control</span></h4><p><span class="l-es">La IA trabaja sobre contenido ya protegido, dentro del entorno del organismo. Queda registrado quién, desde qué área, con qué modelo y sobre qué documento.</span><span class="l-en">AI works on already-protected content inside the agency's environment, logging who, from which area, with which model and on which document.</span></p></li>
+      </ol>
+    </div>
+
+    <div class="spanel" id="sp-rrhh" role="tabpanel" aria-labelledby="tab-rrhh">
+      <div class="sp-head">
+        <div>
+          <h3 class="sp-t"><span class="l-es">Tu equipo de RRHH ya usa IA con datos de personas. ¿Sabés cómo?</span><span class="l-en">Your HR team already uses AI with people's data. Do you know how?</span></h3>
+          <p><span class="l-es">Legajos, evaluaciones de desempeño, entrevistas de desvinculación, procesos disciplinarios, información médica: RRHH gestiona los datos más sensibles de la organización. Privacy AI Studio permite procesarlos con IA dentro de tu infraestructura, con protección de datos, trazabilidad completa y sin exponer a tus colaboradores.</span><span class="l-en">Personnel files, performance reviews, exit interviews, disciplinary processes, medical information: HR handles the organization's most sensitive data. Privacy AI Studio lets you process it with AI inside your infrastructure, with data protection, full traceability and without exposing your employees.</span></p>
+        </div>
+        <a class="op-card" href="#descargas" data-dl="op_rrhh" download="Privacy-AI-Studio-RRHH.pdf"><img src="asset:fotos/op-rrhh.webp" alt="" width="368" height="520" loading="lazy"><span><svg><use href="#i-down"/></svg><span class="l-es">One-pager RRHH</span><span class="l-en">HR one-pager (ES)</span></span></a>
+      </div>
+      <ol class="sp-steps">
+        <li><em>01</em><h4><span class="l-es">Anonimizás</span><span class="l-en">Anonymize</span></h4><p><span class="l-es">Antes de que un legajo o evaluación toque una IA, el sistema protege nombres, DNI, información médica, datos salariales e identificadores. El equipo revisa y valida.</span><span class="l-en">Before any file or review touches an AI, the system protects names, ID numbers, medical information, salary data and identifiers. The team reviews and validates.</span></p></li>
+        <li><em>02</em><h4><span class="l-es">Transcribís</span><span class="l-en">Transcribe</span></h4><p><span class="l-es">Entrevistas de selección, reuniones de feedback y entrevistas de desvinculación a texto, en forma local y con identificación automática de hablantes.</span><span class="l-en">Recruiting interviews, feedback meetings and exit interviews to text, locally and with automatic speaker identification.</span></p></li>
+        <li><em>03</em><h4><span class="l-es">Procesás con IA</span><span class="l-en">Process with AI</span></h4><p><span class="l-es">Analizás perfiles, redactás informes, comparás evaluaciones o extraés insights de entrevistas, siempre sobre contenido ya protegido y con registro de cada interacción.</span><span class="l-en">Analyze profiles, draft reports, compare reviews or extract insights from interviews — always on protected content, with every interaction logged.</span></p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ DIFERENCIADORES ═════════ -->
+<section id="diferenciadores" class="sec dark deep">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="up"><span class="l-es">Diferenciadores</span><span class="l-en">Differentiators</span></div>
+    <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">Por qué Privacy AI Studio y no otra herramienta.</span><span class="l-en">Why Privacy AI Studio and not another tool.</span></h2>
+    <div class="grid3 dif">
+      <article class="glass card" data-reveal="up" style="--d:.04s"><span class="ico"><svg><use href="#i-server"/></svg></span><h3><span class="l-es">On-premise, sin excepciones</span><span class="l-en">On-premise, no exceptions</span></h3><p><span class="l-es">Se instala en tus servidores. Tus datos nunca van a la nube de un tercero. Control total sobre la infraestructura.</span><span class="l-en">Installed on your servers. Your data never goes to a third-party cloud. Full control over the infrastructure.</span></p></article>
+      <article class="glass card" data-reveal="up" style="--d:.1s"><span class="ico"><svg><use href="#i-user"/></svg></span><h3><span class="l-es">Supervisión humana obligatoria</span><span class="l-en">Mandatory human oversight</span></h3><p><span class="l-es">El sistema no valida solo. Cada documento debe ser revisado y aprobado por una persona. Precisión y responsabilidad.</span><span class="l-en">The system never validates on its own. Every document must be reviewed and approved by a person. Accuracy and accountability.</span></p></article>
+      <article class="glass card" data-reveal="up" style="--d:.16s"><span class="ico"><svg><use href="#i-log"/></svg></span><h3><span class="l-es">Trazabilidad completa</span><span class="l-en">Full traceability</span></h3><p><span class="l-es">Cada acción queda registrada: usuario, documento, modelo, tokens, timestamp. Auditoría demostrable ante cualquier control.</span><span class="l-en">Every action is logged: user, document, model, tokens, timestamp. Demonstrable audit trail for any review.</span></p></article>
+      <article class="glass card" data-reveal="up" style="--d:.04s"><span class="ico"><svg><use href="#i-hybrid"/></svg></span><h3><span class="l-es">Motor híbrido PLN + Regex</span><span class="l-en">Hybrid NLP + Regex engine</span></h3><p><span class="l-es">Combina modelos de lenguaje no generativos (spaCy, Stanza, Flair) con patrones configurables por proyecto. Sin alucinaciones.</span><span class="l-en">Combines non-generative language models (spaCy, Stanza, Flair) with project-configurable patterns. No hallucinations.</span></p></article>
+      <article class="glass card" data-reveal="up" style="--d:.1s"><span class="ico"><svg><use href="#i-cap"/></svg></span><h3><span class="l-es">Respaldo académico</span><span class="l-en">Academic backing</span></h3><p><span class="l-es">Diseñado por el IALAB de la Facultad de Derecho de la UBA. Pensado desde el entorno jurídico, para sectores legales.</span><span class="l-en">Designed by IALAB at the University of Buenos Aires School of Law. Conceived from the legal world, for legal sectors.</span></p></article>
+      <article class="glass card" data-reveal="up" style="--d:.16s"><span class="ico"><svg><use href="#i-unlink"/></svg></span><h3><span class="l-es">IA sin ataduras de proveedor</span><span class="l-en">No AI vendor lock-in</span></h3><p><span class="l-es">Compatible con cualquier modelo: GPT, Claude, Gemini, Mistral o modelos locales. Cambiás de proveedor sin cambiar de plataforma.</span><span class="l-en">Works with any model: GPT, Claude, Gemini, Mistral or local models. Switch providers without switching platforms.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ MARQUESINA ═════════ -->
+<div class="marq" aria-hidden="true"><div class="mq-track"><div class="mq-set"><span>GPT</span><i></i><span>Claude</span><i></i><span>Gemini</span><i></i><span>Mistral</span><i></i><span><span class="l-es">Modelos locales</span><span class="l-en">Local models</span></span><i></i><span>On-premise</span><i></i><span><span class="l-es">Ley 25.326</span><span class="l-en">Law 25.326</span></span><i></i><span>GDPR</span><i></i></div><div class="mq-set"><span>GPT</span><i></i><span>Claude</span><i></i><span>Gemini</span><i></i><span>Mistral</span><i></i><span><span class="l-es">Modelos locales</span><span class="l-en">Local models</span></span><i></i><span>On-premise</span><i></i><span><span class="l-es">Ley 25.326</span><span class="l-en">Law 25.326</span></span><i></i><span>GDPR</span><i></i></div></div></div>
+
+<!-- ═════════ RESULTADOS ═════════ -->
+<section id="resultados" class="sec dark">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="up"><span class="l-es">Resultados</span><span class="l-en">Results</span></div>
+    <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">Lo que cambia cuando usás Privacy AI Studio.</span><span class="l-en">What changes when you use Privacy AI Studio.</span></h2>
+    <div class="kpis">
+      <div class="glass kpi" data-reveal="up" style="--d:.06s"><b class="num" data-to="5" data-suf="×">5×</b><p><span class="l-es">veces más rápido frente al proceso manual de transcripción.</span><span class="l-en">faster than manual transcription.</span></p></div>
+      <div class="glass kpi" data-reveal="up" style="--d:.14s"><b class="num" data-to="80" data-suf="%">80%</b><p><span class="l-es">menos tiempo en tareas de anonimización*</span><span class="l-en">less time spent on anonymization tasks*</span></p></div>
+      <div class="glass kpi" data-reveal="up" style="--d:.22s"><b class="num" data-to="100" data-suf="%">100%</b><p><span class="l-es">de interacciones con IA registradas y auditables.</span><span class="l-en">of AI interactions logged and auditable.</span></p></div>
+    </div>
+    <div class="kpi-foot" data-reveal="up"><small><span class="l-es">* Basado en pruebas piloto internas.</span><span class="l-en">* Based on internal pilot tests.</span></small><p class="motto"><span class="l-es">Privacidad como estándar operativo, no como opción.</span><span class="l-en">Privacy as an operating standard, not an option.</span></p></div>
+  </div>
+</section>
+
+<!-- ═════════ IMPLEMENTACIÓN ═════════ -->
+<section id="implementacion" class="sec dark deep">
+  <img class="deco deco-shape2" src="asset:graficos/forma-cromada.webp" alt="" aria-hidden="true" width="807" height="806" loading="lazy">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="up"><span class="l-es">Implementación y soporte</span><span class="l-en">Deployment and support</span></div>
+    <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">De la decisión al uso operativo. Sin fricciones.</span><span class="l-en">From decision to day-to-day use. Without friction.</span></h2>
+    <p class="lead" data-reveal="up" style="--d:.1s"><span class="l-es">Privacy AI Studio se implementa en la infraestructura del organismo. El equipo de Puzzle AI acompaña cada etapa.</span><span class="l-en">Privacy AI Studio is deployed on the organization's own infrastructure. The Puzzle AI team supports every stage.</span></p>
+    <ol class="stages">
+      <li class="glass" data-reveal="up" style="--d:.06s"><em>01</em><h3><span class="l-es">Implementación</span><span class="l-en">Deployment</span></h3><p><span class="l-es">Instalación local en el entorno del organismo, sin dependencia de servicios externos. El equipo técnico de Puzzle AI coordina la puesta en marcha y la configuración inicial de proyectos, roles y entidades.</span><span class="l-en">Local installation in the organization's environment, with no dependence on external services. Puzzle AI's technical team coordinates go-live and the initial setup of projects, roles and entities.</span></p></li>
+      <li class="glass" data-reveal="up" style="--d:.14s"><em>02</em><h3><span class="l-es">Capacitación</span><span class="l-en">Training</span></h3><p><span class="l-es">Onboarding para administradores y usuarios finales. Configuración de motores, patrones y prompts adaptados al contexto de la organización.</span><span class="l-en">Onboarding for administrators and end users. Engines, patterns and prompts configured for the organization's context.</span></p></li>
+      <li class="glass" data-reveal="up" style="--d:.22s"><em>03</em><h3><span class="l-es">Soporte</span><span class="l-en">Support</span></h3><p><span class="l-es">Incluye 1 mes de soporte técnico sin costo para acompañar la puesta en marcha y resolver incidencias iniciales. Luego, el soporte se configura a medida según las necesidades de cada organización.</span><span class="l-en">Includes 1 month of free technical support to accompany go-live and resolve early issues. After that, support is tailored to each organization's needs.</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═════════ RECONOCIMIENTOS ═════════ -->
+<section id="reconocimientos" class="sec dark awards-sec">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal="up"><span class="l-es">Reconocimientos</span><span class="l-en">Awards</span></div>
+    <div class="awards">
+      <figure data-reveal="up" style="--d:.06s"><img src="asset:premios/premio-ripd-aepd-2025.webp" alt="" width="520" height="447" loading="lazy"><figcaption><b><span class="l-es">Premio de Privacidad y Protección de Datos en Iberoamérica</span><span class="l-en">Ibero-American Privacy and Data Protection Award</span></b><span><span class="l-es">Red Iberoamericana de Protección de Datos · Agencia Española de Protección de Datos · 2025</span><span class="l-en">Ibero-American Data Protection Network · Spanish Data Protection Agency (AEPD) · 2025</span></span></figcaption></figure>
+      <figure data-reveal="up" style="--d:.14s"><img src="asset:premios/premio-latamdigital-2026.webp" alt="" width="520" height="446" loading="lazy"><figcaption><b><span class="l-es">1° puesto · Premios LatamDigital 2026</span><span class="l-en">1st place · LatamDigital Awards 2026</span></b><span><span class="l-es">Categoría Ciberseguridad: protección de datos con IA · Latinoamérica</span><span class="l-en">Cybersecurity category: data protection with AI · Latin America</span></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ PUZZLE AI ═════════ -->
+<section id="puzzle" class="sec light">
+  <div class="wrap pz">
+    <div class="pz-copy">
+      <div class="eyebrow" data-reveal="up"><span class="l-es">Quién está detrás</span><span class="l-en">Who's behind it</span></div>
+      <h2 class="h2" data-reveal="up" style="--d:.05s"><span class="l-es">Un producto de Puzzle AI.</span><span class="l-en">A Puzzle AI product.</span></h2>
+      <p class="lead" data-reveal="up" style="--d:.1s"><span class="l-es">Privacy AI Studio es el producto premium de <b>Puzzle AI Agents</b>, creado para que empresas y organizaciones puedan utilizar inteligencia artificial generativa sin comprometer la confidencialidad de sus datos.</span><span class="l-en">Privacy AI Studio is the premium product of <b>Puzzle AI Agents</b>, built so companies and organizations can use generative AI without compromising the confidentiality of their data.</span></p>
+      <p data-reveal="up" style="--d:.14s"><span class="l-es">En un entorno donde la IA redefine la forma de trabajar, la confianza se vuelve el verdadero diferencial. Desarrollada en colaboración con el IALAB de la Facultad de Derecho de la UBA, Privacy AI Studio integra el conocimiento académico con la aplicación práctica en entornos corporativos y públicos.</span><span class="l-en">As AI redefines how we work, trust becomes the real differentiator. Developed in collaboration with IALAB at the University of Buenos Aires School of Law, Privacy AI Studio brings academic knowledge into practical use in corporate and public environments.</span></p>
+      <a class="btn btn-dark" href="{{link:puzzle}}" target="_blank" rel="noopener" data-reveal="up" style="--d:.18s"><svg><use href="#i-globe"/></svg><span class="l-es">Conocé Puzzle AI</span><span class="l-en">Meet Puzzle AI</span></a>
+    </div>
+    <div class="pz-cards">
+      <div class="pz-card pz-dev" data-reveal="up" style="--d:.08s"><small><span class="l-es">Desarrolla</span><span class="l-en">Developed by</span></small><img src="asset:logos/puzzle-ai.png" alt="Puzzle AI" width="159" height="45" loading="lazy"><p><span class="l-es">Agentes de IA para organizaciones</span><span class="l-en">AI agents for organizations</span></p></div>
+      <div class="pz-card" data-reveal="up" style="--d:.14s"><small><span class="l-es">Diseña</span><span class="l-en">Designed by</span></small><img src="asset:logos/ialab-uba.png" alt="IALAB" width="285" height="66" loading="lazy"><p><span class="l-es">Laboratorio de Innovación e Inteligencia Artificial · Facultad de Derecho, UBA</span><span class="l-en">Innovation and Artificial Intelligence Lab · University of Buenos Aires School of Law</span></p></div>
+      <a class="pz-broch" href="#descargas" data-dl="brochure" download="Privacy-AI-Studio-Brochure.pdf" data-reveal="up" style="--d:.2s"><img src="asset:fotos/brochure-tapa.webp" alt="" width="1100" height="619" loading="lazy"><span class="pzb-t"><b><span class="l-es">Brochure general 2026</span><span class="l-en">2026 general brochure</span></b><small><span class="l-es">PDF · 11 páginas · 8 MB</span><span class="l-en">PDF · 11 pages · 8 MB · Spanish</span></small></span><span class="pzb-i"><svg><use href="#i-down"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CONTACTO ═════════ -->
+<section id="contacto" class="sec dark contact">
+  <img class="deco deco-shape3" src="asset:graficos/forma-cromada.webp" alt="" aria-hidden="true" width="807" height="806" loading="lazy">
+  <div class="wrap">
+    <div class="cgrid">
+      <div class="ccol">
+        <div class="eyebrow" data-reveal="up"><span class="l-es">Solicitá una demo</span><span class="l-en">Request a demo</span></div>
+        <h2 class="contact-big" data-reveal="up" style="--d:.05s"><span class="l-es">Tus datos confidenciales permanecen <span class="chrome">donde deben estar.</span></span><span class="l-en">Your confidential data stays <span class="chrome">where it belongs.</span></span></h2>
+        <p class="lead" data-reveal="up" style="--d:.1s"><span class="l-es">En 30 minutos te mostramos el flujo completo sobre un caso real de tu organización.</span><span class="l-en">In 30 minutes we'll walk you through the full workflow on a real case from your organization.</span></p>
+        <div class="clist" data-reveal="up" style="--d:.14s">
+          <a class="citem" href="{{link:mailto}}"><span class="cico"><svg><use href="#i-mail"/></svg></span><span>{{link:mail}}<small>Email</small></span></a>
+          <a class="citem" href="{{link:puzzle}}" target="_blank" rel="noopener"><span class="cico"><svg><use href="#i-globe"/></svg></span><span>{{link:puzzle_label}}<small>Puzzle AI</small></span></a>
+          <a class="citem" href="{{link:web}}" target="_blank" rel="noopener"><span class="cico"><svg><use href="#i-globe"/></svg></span><span>{{link:web_label}}<small>Privacy AI Studio</small></span></a>
+        </div>
+      </div>
+      <form class="glass cform" id="contact-form" novalidate data-endpoint="{{link:form_endpoint}}" data-reveal="up" style="--d:.1s">
+        <div class="cform-head"><span class="l-es">Agendá tu demo</span><span class="l-en">Book your demo</span></div>
+        <div class="frow">
+          <div class="fld"><label for="f-nombre"><span class="l-es">Nombre y apellido</span><span class="l-en">Full name</span><i>*</i></label><input type="text" id="f-nombre" name="nombre" required autocomplete="name"><span class="err"><span class="l-es">Completá este campo</span><span class="l-en">Please fill in this field</span></span></div>
+          <div class="fld"><label for="f-org"><span class="l-es">Organización</span><span class="l-en">Organization</span><i>*</i></label><input type="text" id="f-org" name="organizacion" required autocomplete="organization"><span class="err"><span class="l-es">Completá este campo</span><span class="l-en">Please fill in this field</span></span></div>
+          <div class="fld"><label for="f-cargo"><span class="l-es">Cargo</span><span class="l-en">Role</span></label><input type="text" id="f-cargo" name="cargo" autocomplete="organization-title"></div>
+          <div class="fld"><label for="f-sector"><span class="l-es">Sector</span><span class="l-en">Sector</span><i>*</i></label><select id="f-sector" name="sector" required><option value="" class="ph"></option><option value="Poder Judicial" data-en="Judiciary">Poder Judicial</option><option value="Organismo público" data-en="Public sector">Organismo público</option><option value="RRHH" data-en="Human Resources">Recursos Humanos</option><option value="Legal / Compliance" data-en="Legal / Compliance">Legal / Compliance</option><option value="Otro" data-en="Other">Otro</option></select><span class="err"><span class="l-es">Elegí una opción</span><span class="l-en">Choose an option</span></span></div>
+          <div class="fld"><label for="f-email">Email<i>*</i></label><input type="email" id="f-email" name="email" required autocomplete="email"><span class="err"><span class="l-es">Ingresá un email válido</span><span class="l-en">Enter a valid email</span></span></div>
+          <div class="fld"><label for="f-tel"><span class="l-es">Teléfono</span><span class="l-en">Phone</span></label><input type="tel" id="f-tel" name="telefono" autocomplete="tel"></div>
+          <div class="fld fld-full"><label for="f-msg"><span class="l-es">¿Qué te gustaría resolver?</span><span class="l-en">What would you like to solve?</span></label><textarea id="f-msg" name="mensaje" rows="4"></textarea></div>
+        </div>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-solid fsend"><svg><use href="#i-send"/></svg><span class="lbl-send"><span class="l-es">Solicitar demo</span><span class="l-en">Request a demo</span></span><span class="lbl-wait"><span class="l-es">Enviando…</span><span class="l-en">Sending…</span></span></button>
+        <div class="fmsg ok" role="status"><span class="l-es"><b>¡Gracias!</b> Recibimos tu solicitud y te vamos a contactar para coordinar la demo.</span><span class="l-en"><b>Thank you!</b> We received your request and will contact you to schedule the demo.</span></div>
+        <div class="fmsg ko" role="alert"><span class="l-es">No pudimos enviar la solicitud. Escribinos a <a href="{{link:mailto}}">{{link:mail}}</a>.</span><span class="l-en">We couldn't send your request. Write to us at <a href="{{link:mailto}}">{{link:mail}}</a>.</span></div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <img src="asset:logos/privacy-ai-studio-claro.png" alt="Privacy AI Studio by Puzzle AI" width="389" height="101" loading="lazy">
+          <p><span class="l-es">Privacidad como estándar operativo, no como opción.</span><span class="l-en">Privacy as an operating standard, not an option.</span></p>
+        </div>
+        <nav class="foot-nav" aria-label="Mapa del sitio">
+          <div class="fn-col"><div class="fn-h"><span class="l-es">Plataforma</span><span class="l-en">Platform</span></div><a href="#flujo"><span class="l-es">Cómo funciona</span><span class="l-en">How it works</span></a><a href="#anonimizacion"><span class="l-es">Anonimización</span><span class="l-en">Anonymization</span></a><a href="#transcripcion"><span class="l-es">Transcripción</span><span class="l-en">Transcription</span></a><a href="#chat-ia"><span class="l-es">Chat IA</span><span class="l-en">AI Chat</span></a></div>
+          <div class="fn-col"><div class="fn-h"><span class="l-es">Para quién</span><span class="l-en">Who it's for</span></div><a href="#sectores" data-sector="judicial"><span class="l-es">Poder Judicial</span><span class="l-en">Judiciary</span></a><a href="#sectores" data-sector="estado"><span class="l-es">Organismos públicos</span><span class="l-en">Public sector</span></a><a href="#sectores" data-sector="rrhh"><span class="l-es">Recursos Humanos</span><span class="l-en">Human Resources</span></a></div>
+          <div class="fn-col"><div class="fn-h"><span class="l-es">Descargas</span><span class="l-en">Downloads</span></div><a href="#descargas" data-dl="brochure" download="Privacy-AI-Studio-Brochure.pdf"><span class="l-es">Brochure general</span><span class="l-en">General brochure (ES)</span></a><a href="#descargas" data-dl="op_judicial" download="Privacy-AI-Studio-Poder-Judicial.pdf"><span class="l-es">One-pager Poder Judicial</span><span class="l-en">Judiciary one-pager (ES)</span></a><a href="#descargas" data-dl="op_estado" download="Privacy-AI-Studio-Organismos-Publicos.pdf"><span class="l-es">One-pager Sector público</span><span class="l-en">Public sector one-pager (ES)</span></a><a href="#descargas" data-dl="op_rrhh" download="Privacy-AI-Studio-RRHH.pdf"><span class="l-es">One-pager RRHH</span><span class="l-en">HR one-pager (ES)</span></a></div>
+          <div class="fn-col"><div class="fn-h">Puzzle AI</div><a href="#puzzle"><span class="l-es">Quiénes somos</span><span class="l-en">About</span></a><a href="{{link:puzzle}}" target="_blank" rel="noopener">{{link:puzzle_label}}</a><a href="{{link:mailto}}">{{link:mail}}</a></div>
+        </nav>
+      </div>
+      <div class="foot-legal">
+        <span><span class="l-es">Diseñado por IALAB · Facultad de Derecho, UBA. Desarrollado por Puzzle AI.</span><span class="l-en">Designed by IALAB · University of Buenos Aires School of Law. Developed by Puzzle AI.</span></span>
+        <span>© 2026 Puzzle AI · Privacy AI Studio</span>
+      </div>
+    </div>
+  </footer>
+</section>
+</main>
+
+<nav id="dotnav" aria-label="Índice">
+  <a href="#hero" data-es="Inicio" data-en="Home"></a><a href="#problema" data-es="El problema" data-en="The problem"></a><a href="#flujo" data-es="Cómo funciona" data-en="How it works"></a><a href="#anonimizacion" data-es="Anonimización" data-en="Anonymization"></a><a href="#transcripcion" data-es="Transcripción" data-en="Transcription"></a><a href="#chat-ia" data-es="Chat IA" data-en="AI Chat"></a><a href="#sectores" data-es="Para quién es" data-en="Who it's for"></a><a href="#diferenciadores" data-es="Diferenciadores" data-en="Differentiators"></a><a href="#resultados" data-es="Resultados" data-en="Results"></a><a href="#implementacion" data-es="Implementación" data-en="Deployment"></a><a href="#reconocimientos" data-es="Reconocimientos" data-en="Awards"></a><a href="#puzzle" data-es="Puzzle AI" data-en="Puzzle AI"></a><a href="#contacto" data-es="Contacto" data-en="Contact"></a>
+</nav>
+
+<script><!--js--></script>
+</body>
+</html>

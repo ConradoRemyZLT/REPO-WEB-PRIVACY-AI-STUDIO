@@ -1,0 +1,11 @@
+{
+  "_nota": "Datos de contacto y enlaces externos. Se usan en la plantilla como {{link:clave}}. Las claves que empiezan con _ no se publican.",
+  "web": "https://www.privacyaistudio.com/",
+  "web_label": "privacyaistudio.com",
+  "puzzle": "https://thepuzzle.ai/",
+  "puzzle_label": "thepuzzle.ai",
+  "mail": "hello@thepuzzle.ai",
+  "mailto": "mailto:hello@thepuzzle.ai?subject=Demo%20Privacy%20AI%20Studio",
+  "form_endpoint": "https://formsubmit.co/ajax/hello@thepuzzle.ai",
+  "_form_nota": "FormSubmit pide activar la casilla la primera vez: llega un mail a hello@thepuzzle.ai con un link de confirmación. Sin activar, el formulario muestra el aviso de error con el mail directo."
+}
