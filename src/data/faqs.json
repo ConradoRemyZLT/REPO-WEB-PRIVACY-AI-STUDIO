@@ -1,0 +1,29 @@
+{
+  "_nota": "PROVISORIAS: redactadas a partir del brochure 2026 mientras no se pueda leer la página de FAQs de la web actual (Wix las bloquea a la lectura automática y no están en el CMS). Reemplazar por las oficiales cuando estén. Cada respuesta acepta HTML simple (<b>).",
+  "items": [
+    { "q_es": "¿Qué es Privacy AI Studio?", "q_en": "What is Privacy AI Studio?",
+      "a_es": "Es la plataforma de Puzzle AI para usar inteligencia artificial generativa con información confidencial. Combina tres módulos que trabajan en secuencia —anonimización de documentos, transcripción de audio y video y chat IA— y registra cada paso para que pueda auditarse. Fue diseñada por el IALAB de la Facultad de Derecho de la UBA.",
+      "a_en": "It is Puzzle AI's platform for using generative AI with confidential information. It combines three modules that work in sequence — document anonymization, audio and video transcription and AI chat — and logs every step so it can be audited. It was designed by IALAB at the University of Buenos Aires School of Law." },
+    { "q_es": "¿Mis datos salen de la organización?", "q_en": "Does my data leave the organization?",
+      "a_es": "No. Privacy AI Studio es <b>on-premise</b>: se instala en los servidores de tu organización y opera de forma local. La transcripción es 100% local y el audio nunca sale de tu infraestructura, ni para procesarse ni para almacenarse.",
+      "a_en": "No. Privacy AI Studio is <b>on-premise</b>: it is installed on your organization's servers and runs locally. Transcription is 100% local and audio never leaves your infrastructure, neither for processing nor for storage." },
+    { "q_es": "¿Cómo detecta los datos sensibles? ¿Puede equivocarse?", "q_en": "How does it detect sensitive data? Can it make mistakes?",
+      "a_es": "Usa un motor híbrido: modelos de lenguaje <b>no generativos</b> (spaCy, Stanza, Flair) combinados con patrones configurables por proyecto, por lo que no “alucina”. Además el sistema nunca valida solo: cada documento tiene que ser revisado y aprobado por una persona antes de exportarse.",
+      "a_en": "It uses a hybrid engine: <b>non-generative</b> language models (spaCy, Stanza, Flair) combined with project-configurable patterns, so it does not “hallucinate”. And the system never validates on its own: every document must be reviewed and approved by a person before export." },
+    { "q_es": "¿Qué formatos admite?", "q_en": "Which formats does it support?",
+      "a_es": "Documentos: PDF, Word (.docx), ODT e imágenes JPG/PNG. Exporta en PDF preservando el layout, PDF sin etiquetas (ofuscado), Word o diccionario de anonimización. Audio y video: MP3, MP4, WAV, M4A, FLAC, OGG y WMV, con exportación a Word con o sin timecode.",
+      "a_en": "Documents: PDF, Word (.docx), ODT and JPG/PNG images. Export as layout-preserving PDF, untagged (obfuscated) PDF, Word or anonymization dictionary. Audio and video: MP3, MP4, WAV, M4A, FLAC, OGG and WMV, exported to Word with or without timecodes." },
+    { "q_es": "¿Con qué modelos de IA funciona y cómo se paga?", "q_en": "Which AI models does it work with, and how is it priced?",
+      "a_es": "Se conecta vía API a cualquier proveedor: GPT, Claude, Gemini, Mistral, modelos locales y más. Cambiás de proveedor sin cambiar de plataforma. <b>Se paga por uso de API, no por licencia por usuario</b>.",
+      "a_en": "It connects via API to any provider: GPT, Claude, Gemini, Mistral, local models and more. You can switch providers without switching platforms. <b>You pay for API usage, not per-user licenses</b>." },
+    { "q_es": "¿Ayuda a cumplir con la Ley 25.326?", "q_en": "Does it help comply with Argentina's Law 25.326?",
+      "a_es": "Sí: la norma exige demostrar cómo se tratan los datos confidenciales. Privacy AI Studio registra cada acción —usuario, documento, modelo, tokens y timestamp— para que la organización pueda auditar el uso de IA y acreditarlo ante cualquier control.",
+      "a_en": "Yes: the law requires organizations to show how confidential data is handled. Privacy AI Studio logs every action — user, document, model, tokens and timestamp — so the organization can audit AI use and prove it in any review." },
+    { "q_es": "¿Cómo es la implementación?", "q_en": "What does deployment look like?",
+      "a_es": "Se instala en la infraestructura del organismo, sin dependencia de servicios externos. El equipo de Puzzle AI coordina la puesta en marcha y la configuración inicial de proyectos, roles y entidades, y capacita a administradores y usuarios.",
+      "a_en": "It is installed on the organization's infrastructure, with no dependence on external services. The Puzzle AI team coordinates go-live and the initial setup of projects, roles and entities, and trains administrators and users." },
+    { "q_es": "¿Qué soporte incluye?", "q_en": "What support is included?",
+      "a_es": "Incluye <b>1 mes de soporte técnico sin costo</b> para acompañar la puesta en marcha y resolver incidencias iniciales. Después, el soporte se configura a medida según las necesidades de cada organización.",
+      "a_en": "It includes <b>1 month of free technical support</b> to accompany go-live and resolve early issues. After that, support is tailored to each organization's needs." }
+  ]
+}

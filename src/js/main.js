@@ -116,6 +116,14 @@
     });
   });
 
+  /* ───────── Novedades: las fotos vienen del servidor de Wix; si no cargan queda el fondo de marca ───────── */
+  $$('.nimg img').forEach(function (img) {
+    var ok = function () { img.classList.add('ok'); };
+    if (img.complete && img.naturalWidth) ok();
+    img.addEventListener('load', ok);
+    img.addEventListener('error', function () { img.remove(); });
+  });
+
   /* ───────── Aparición al hacer scroll ───────── */
   var rev = $$('[data-reveal]');
   if ('IntersectionObserver' in window && !REDUCED) {

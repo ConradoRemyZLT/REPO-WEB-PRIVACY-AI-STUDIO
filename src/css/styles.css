@@ -1,16 +1,18 @@
 /* ═══════════════════════════════════════════════════════════════
    PRIVACY AI STUDIO · by Puzzle AI
    Estructura base: ZLT-WEB-V2 (barra 64 px, wrap 1200 px, breakpoints 480/640/860/900, pares .l-es/.l-en).
-   Branding: BrandBook Privacy AI Studio + Brochure 2026 (navy #021444, glass, cromados, Causten + DM Sans).
+   Branding: BrandBook Privacy AI Studio + Brochure 2026 (navy #021444, papel #F9F9F7, glass, cromados, Causten + DM Sans).
    ═══════════════════════════════════════════════════════════════ */
 
 /* Tipografía
-   Títulos: Causten (marca, licencia comercial: se declara pero no se embebe; si está instalada se usa).
-            Sustituto web embebido: Urbanist (OFL), la geométrica más cercana.
-   Texto:   DM Sans (OFL), la misma del brochure.                                      */
-@font-face{font-family:'Urbanist';font-style:normal;font-weight:500;font-display:swap;src:url(asset:fonts/urbanist-latin-500-normal.woff2) format('woff2')}
-@font-face{font-family:'Urbanist';font-style:normal;font-weight:600;font-display:swap;src:url(asset:fonts/urbanist-latin-600-normal.woff2) format('woff2')}
-@font-face{font-family:'Urbanist';font-style:normal;font-weight:700;font-display:swap;src:url(asset:fonts/urbanist-latin-700-normal.woff2) format('woff2')}
+   Títulos e interfaz: Causten (la tipografía de la marca, embebida desde los archivos oficiales).
+   Texto corrido: DM Sans (OFL), la misma que usa el brochure 2026.                    */
+@font-face{font-family:'Causten';font-style:normal;font-weight:300;font-display:swap;src:url(asset:fonts/causten-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Causten';font-style:normal;font-weight:400;font-display:swap;src:url(asset:fonts/causten-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Causten';font-style:normal;font-weight:500;font-display:swap;src:url(asset:fonts/causten-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Causten';font-style:normal;font-weight:600;font-display:swap;src:url(asset:fonts/causten-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Causten';font-style:normal;font-weight:700;font-display:swap;src:url(asset:fonts/causten-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Causten';font-style:normal;font-weight:900;font-display:swap;src:url(asset:fonts/causten-latin-900-normal.woff2) format('woff2')}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(asset:fonts/dm-sans-latin-400-normal.woff2) format('woff2')}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(asset:fonts/dm-sans-latin-500-normal.woff2) format('woff2')}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url(asset:fonts/dm-sans-latin-700-normal.woff2) format('woff2')}
@@ -27,7 +29,7 @@
   --line-d:rgba(255,255,255,.12); --line-l:rgba(26,31,58,.12);
   --ok:#3FB27F; --mid:#E5B53A; --low:#E2604F;
   --bar:64px; --ease:cubic-bezier(.16,.84,.44,1); --wrap:1200px; --r:22px;
-  --f-head:'Causten','Urbanist',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --f-head:'Causten',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   --f-body:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -520,6 +522,97 @@ body.en #dotnav a::after{content:attr(data-en)}
 .motion .kpi .num{transition:filter .8s var(--ease)}
 .motion .kpi:not(.in) .num{filter:blur(8px)}
 
+
+/* ═════════ TEMA CLARO (secciones .light) ═════════
+   Las variables "-d" (pensadas para fondo oscuro) se redefinen dentro de .light: los componentes se adaptan solos.
+   Las ventanas de producto (.demo) siguen oscuras sobre el papel, como una app sobre el escritorio. */
+.light{--tx-d:#141A36;--muted-d:#565D75;--dim-d:rgba(20,26,54,.5);--line-d:rgba(20,26,54,.11);color:var(--tx-d);
+  background:radial-gradient(1000px 520px at 88% -10%,#E9ECF4,transparent 70%),var(--paper)}
+.light.soft{background:radial-gradient(900px 520px at 10% 0%,#fff,transparent 70%),#EDEFF4}
+.light .h2,.light h3,.light h4,.light .contact-big{color:#0C1640}
+.light b,.light .shadow-ai b,.light .aud-t b,.light .anymodel b{color:var(--navy)}
+.light .glass{background:#fff;border:1px solid rgba(20,26,54,.09);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 30px 60px -38px rgba(2,20,68,.42),0 2px 8px -4px rgba(2,20,68,.08);backdrop-filter:none;-webkit-backdrop-filter:none}
+.light .card .ico{background:#EEF1FA;border-color:rgba(2,20,68,.08);color:var(--navy)}
+.light .chips li,.light .aud-list a{background:#fff;border-color:rgba(20,26,54,.12)}
+.light .aud-list a:hover{background:#fff;border-color:var(--navy);box-shadow:0 12px 26px -16px rgba(2,20,68,.5)}
+.light .aud-list svg{color:var(--navy)}
+.light .num{background:linear-gradient(180deg,#0A2266 15%,#5A6B9E);-webkit-background-clip:text;background-clip:text}
+.light .awards figure{--tx-d:#E9ECF5;--muted-d:rgba(233,236,245,.66);color:var(--tx-d);background:linear-gradient(160deg,#0C2670,#021444 60%,#010D33);border-color:rgba(2,20,68,.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 34px 64px -38px rgba(2,20,68,.7)}
+.light .awards figure b{color:#fff}
+.light .pz-card,.light .pz-broch{--tx-d:#E9ECF5;--muted-d:rgba(233,236,245,.7);--dim-d:rgba(233,236,245,.5);--line-d:rgba(255,255,255,.12)}
+.light .btn-ghost{border-color:rgba(20,26,54,.2);background:#fff;color:var(--navy)}
+.light .btn-ghost:hover{border-color:var(--navy)}
+.band-aud.light{border-color:rgba(20,26,54,.08);background:#fff}
+.light .io-col li::before{color:var(--navy)}
+/* ventanas de producto: siempre oscuras */
+.light .demo{--tx-d:#E9ECF5;--muted-d:rgba(233,236,245,.66);--dim-d:rgba(233,236,245,.44);--line-d:rgba(255,255,255,.12);color:var(--tx-d);
+  background:linear-gradient(160deg,#0C2670 0%,#021444 55%,#010D33 100%);border:1px solid rgba(2,20,68,.35);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 50px 90px -40px rgba(2,20,68,.75),0 10px 30px -18px rgba(2,20,68,.5)}
+.light .demo b{color:#fff}
+.light .demo .h2,.light .demo h3,.light .demo h4{color:#fff}
+.light .demo::after{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(150,175,255,.18),transparent 45%)}
+/* texturas claras del manual (seda / ondas), muy sutiles */
+.tex-silk::before,.tex-waves::before{content:"";position:absolute;pointer-events:none;mix-blend-mode:multiply}
+.tex-silk::before{left:0;top:0;width:min(900px,70vw);aspect-ratio:1;background:url(asset:graficos/textura-seda-clara.webp) 0 0/cover no-repeat;opacity:.55;
+  -webkit-mask-image:radial-gradient(closest-side,#000 40%,transparent);mask-image:radial-gradient(closest-side,#000 40%,transparent);translate:-22% -28%}
+.tex-waves::before{right:-8%;bottom:-14%;width:min(980px,80vw);aspect-ratio:1;background:url(asset:graficos/textura-ondas-claras.webp) center/cover no-repeat;opacity:.38;
+  -webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent);mask-image:radial-gradient(closest-side,#000 45%,transparent)}
+.tex-silk>.wrap,.tex-waves>.wrap{position:relative;z-index:1}
+/* índice lateral y barra sobre secciones claras */
+.light .split .wi.chrome{background-image:linear-gradient(105deg,transparent 38%,rgba(120,150,255,.7) 50%,transparent 62%),linear-gradient(180deg,#2B344E,#021444)}
+
+/* logo vectorial de Puzzle AI */
+.pz-logo{display:inline-flex;color:inherit}
+.pz-logo svg{height:100%;width:auto;display:block}
+.cred .pz-logo{height:26px;opacity:.92;color:#fff}
+.pz-card .pz-logo{height:34px;color:#fff;align-self:flex-start}
+
+/* ═════════ NOVEDADES ═════════ */
+.sec-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px 48px;align-items:end;margin-bottom:44px}
+.sec-head .h2,.sec-head .lead{margin-bottom:0}
+.news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ncard{position:relative;display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.13);
+  transition:transform .5s var(--ease),border-color .3s,box-shadow .5s;isolation:isolate}
+.ncard:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.3);box-shadow:0 40px 70px -40px rgba(0,0,0,.8)}
+.nimg{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:radial-gradient(600px 300px at 70% 30%,#2A4BC4,transparent 60%),linear-gradient(160deg,#0C2670,#010D33)}
+.nimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(1,13,51,.55))}
+.nimg img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease),opacity .6s;opacity:0}
+.nimg img.ok{opacity:1}
+.ncard:hover .nimg img{transform:scale(1.06)}
+.nbody{display:flex;flex-direction:column;gap:12px;padding:22px 24px 24px;flex:1}
+.nmeta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font:600 11.5px/1 var(--f-head);letter-spacing:.16em;text-transform:uppercase;color:var(--dim-d)}
+.nmeta b{color:#C9D4FF;font-weight:600}
+.nmeta time::before{content:"·";margin-right:10px}
+.ntitle{font:600 18px/1.32 var(--f-head);color:#fff;text-wrap:pretty}
+.nmore{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font:600 13.5px/1 var(--f-head);color:var(--muted-d);transition:color .25s,gap .3s var(--ease)}
+.ncard:hover .nmore{color:#fff;gap:12px}
+.nfeat{grid-column:span 2;grid-row:span 2}
+.nfeat .nimg{flex:1;aspect-ratio:auto;min-height:260px}
+.nfeat .nbody{flex:none;padding:28px 32px 30px}
+.nfeat .ntitle{font-size:clamp(21px,2vw,28px);line-height:1.25}
+
+/* ═════════ PREGUNTAS FRECUENTES ═════════ */
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(36px,6vw,90px);align-items:start}
+.faq-side{position:sticky;top:calc(var(--bar) + 40px)}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq{border-radius:18px;background:#fff;border:1px solid rgba(20,26,54,.09);box-shadow:0 20px 44px -36px rgba(2,20,68,.45);transition:box-shadow .4s,border-color .3s}
+.faq[open]{border-color:rgba(2,20,68,.22);box-shadow:0 34px 60px -40px rgba(2,20,68,.55)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:22px 24px;font:600 17.5px/1.35 var(--f-head);color:#0C1640}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary em{font:600 12px/1 var(--f-head);font-style:normal;letter-spacing:.1em;color:var(--dim-d);flex:none;width:22px}
+.faq summary>span{flex:1}
+.faq summary i{position:relative;width:30px;height:30px;flex:none;border-radius:50%;border:1px solid rgba(20,26,54,.14);transition:background .3s,border-color .3s,transform .5s var(--ease)}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.6px;margin:-.8px 0 0 -5.5px;background:var(--navy);border-radius:2px;transition:transform .4s var(--ease),background .3s}
+.faq summary i::after{transform:rotate(90deg)}
+.faq[open] summary i{background:var(--navy);border-color:var(--navy);transform:rotate(180deg)}
+.faq[open] summary i::before,.faq[open] summary i::after{background:#fff}
+.faq[open] summary i::after{transform:rotate(0)}
+.faq summary:hover i{border-color:var(--navy)}
+.faq-a{padding:0 24px 22px 62px;overflow:hidden}
+.faq-a p{margin:0;font-size:15.5px;line-height:1.7;color:var(--muted-d);max-width:62ch}
+.motion .faq-a{animation:faqIn .5s var(--ease)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}}
+
 /* ═════════ RESPONSIVE ═════════ */
 @media (max-width:1240px){.hdr-dl span{display:none}}
 @media (max-width:1120px){
@@ -537,6 +630,11 @@ body.en #dotnav a::after{content:attr(data-en)}
 }
 @media (max-width:860px){
   .grid3,.kpis,.stages,.sp-steps{grid-template-columns:minmax(0,1fr)}
+  .news{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nfeat{grid-row:auto}
+  .nfeat .nimg{flex:none;aspect-ratio:16/9;min-height:0}
+  .sec-head,.faq-grid{grid-template-columns:minmax(0,1fr)}
+  .faq-side{position:static}
   .flow{grid-template-columns:minmax(0,1fr)}
   .flow::before{top:6%;bottom:6%;left:34px;right:auto;width:1px;height:auto;background:linear-gradient(180deg,transparent,rgba(255,255,255,.35),transparent)}
   .flow::after{display:none}
@@ -550,6 +648,12 @@ body.en #dotnav a::after{content:attr(data-en)}
   .kpi{min-height:0}
 }
 @media (max-width:640px){
+  .news{grid-template-columns:minmax(0,1fr)}
+  .nfeat{grid-column:auto;grid-row:auto}
+  .nfeat .nimg{flex:none;aspect-ratio:16/10;min-height:0}
+  .nfeat .nbody{padding:22px 24px 24px}
+  .faq-a{padding-left:24px}
+  .faq summary{padding:18px 18px;font-size:16px}
   .feats,.io,.frow{grid-template-columns:minmax(0,1fr)}
   .pz-cards{grid-template-columns:minmax(0,1fr)}
   .hero-cta .btn{flex:1 1 100%}

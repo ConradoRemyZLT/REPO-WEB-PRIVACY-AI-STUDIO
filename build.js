@@ -5,7 +5,7 @@
     node build.js             -> dist/index.html  (UN solo HTML autocontenido, todo en base64; es lo que se publica)
     node build.js --dev       -> preview.html     (misma página, pero apunta a los archivos del repo; para editar rápido)
     node build.js --index     -> permite indexación en Google (por defecto: noindex, para no competir con privacyaistudio.com)
-    node build.js --sin-login -> sin pantalla de login (por defecto el HTML lleva gate.js, los mismos usuarios que ZLT-WEB-V2)
+    node build.js --sin-login -> sin pantalla de login (por defecto lleva el login de Privacy, con los mismos usuarios que ZLT-WEB-V2)
 
   Marcadores que entiende la plantilla (src/html/index.html):
     <!--css-->  <!--js-->            estilos y script (main.js + motion.js)
@@ -13,6 +13,7 @@
     asset:ruta/archivo.ext          recurso del repo -> data URI (o ruta relativa en --dev)
     {{link:clave}}                  valor de links/links.json
     data:dl (entre barra-asterisco) JSON de src/data/dl.json (PDFs descargables; se embeben una sola vez)
+    <!--news-->  <!--faqs-->        tarjetas de novedades y preguntas frecuentes, desde src/data/news.json y faqs.json
 */
 const fs = require('fs');
 const path = require('path');
@@ -77,6 +78,29 @@ html = html.replace(/\/\*data:(\w+)\*\//g, (_, k) => {
   const src = k === 'links' ? links : JSON.parse(read('src/data/' + k + '.json'));
   return JSON.stringify(resolveData(src)).replace(/</g, '\\u003c');
 });
+// Novedades y preguntas frecuentes: se arman desde src/data/news.json y src/data/faqs.json
+const MES = { es: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'], en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] };
+const fecha = (d, l) => { const [y, m, dd] = d.split('-').map(Number); return l === 'es' ? dd + ' ' + MES.es[m - 1] + ' ' + y : MES.en[m - 1] + ' ' + dd + ', ' + y; };
+const pair = (es, en) => '<span class="l-es">' + es + '</span><span class="l-en">' + en + '</span>';
+html = html.replace('<!--news-->', () => {
+  const N = JSON.parse(read('src/data/news.json')).items;
+  return N.map((n, k) => {
+    const img = 'https://static.wixstatic.com/media/' + n.img + '/v1/fill/w_760,h_475,al_c,q_80,enc_auto/' + (k + 1) + '.jpg';
+    const pdf = /\.pdf($|\?)/i.test(n.url);
+    return '<a class="ncard' + (k === 0 ? ' nfeat' : '') + '" href="' + esc(n.url) + '" target="_blank" rel="noopener" data-reveal="up" style="--d:' + (0.04 + (k % 3) * 0.07).toFixed(2) + 's">' +
+      '<span class="nimg"><img src="' + esc(img) + '" alt="" loading="lazy" decoding="async" width="760" height="475" referrerpolicy="no-referrer"></span>' +
+      '<span class="nbody"><span class="nmeta"><b>' + esc(n.medio) + '</b><time datetime="' + n.date + '">' + pair(fecha(n.date, 'es'), fecha(n.date, 'en')) + '</time></span>' +
+      '<span class="ntitle">' + pair(esc(n.es), esc(n.en)) + '</span>' +
+      '<span class="nmore">' + (pdf ? pair('Leer la nota (PDF)', 'Read the article (PDF, ES)') : pair('Leer la nota', 'Read the article (ES)')) + '<svg><use href="#i-arrow"/></svg></span></span></a>';
+  }).join('\n');
+});
+html = html.replace('<!--faqs-->', () => {
+  const F = JSON.parse(read('src/data/faqs.json')).items;
+  return F.map((f, k) => '<details class="faq" data-reveal="up" style="--d:' + (0.03 * (k % 4)).toFixed(2) + 's"' + (k === 0 ? ' open' : '') + '>' +
+    '<summary><em>' + String(k + 1).padStart(2, '0') + '</em>' + pair(f.q_es, f.q_en) + '<i aria-hidden="true"></i></summary>' +
+    '<div class="faq-a"><p>' + pair(f.a_es, f.a_en) + '</p></div></details>').join('\n');
+});
+
 html = html.replace(/\{\{link:(\w+)\}\}/g, (_, k) => {
   if (!(k in links)) throw new Error('Link inexistente: ' + k);
   return esc(links[k]);
@@ -84,10 +108,16 @@ html = html.replace(/\{\{link:(\w+)\}\}/g, (_, k) => {
 html = html.replace(/asset:([\w\-./]+\.(?:webp|jpe?g|png|svg|mp4|webm|pdf|woff2))/g, (_, p) => asset(p));
 html = html.replace('<!--robots-->', INDEX ? '<meta name="robots" content="index,follow">' : '<meta name="robots" content="noindex,nofollow">');
 
-// Login: gate.js (copia exacta del de ZLT-WEB-V2) inline después de </title>, antes de que se pinte nada
+// Login: src/js/gate-privacy.js (estética Privacy; SALT y USERS copiados de gate.js, el de ZLT-WEB-V2) inline después de </title>
 if (LOGIN) {
-  if (!exists('gate.js')) throw new Error('Falta gate.js (login). Copiarlo de ZLT-WEB-V2 o usar --sin-login');
-  const gate = read('gate.js');
+  if (!exists('src/js/gate-privacy.js')) throw new Error('Falta src/js/gate-privacy.js (login). Usar --sin-login para armar sin login');
+  const ref = read('gate.js'), mine = read('src/js/gate-privacy.js');
+  const pick = (s, re) => (s.match(re) || [''])[0].replace(/\s+/g, '');
+  if (pick(ref, /var SALT = "[^"]+";/) !== pick(mine, /var SALT = "[^"]+";/) || pick(ref, /var USERS = \[[\s\S]*?\];/) !== pick(mine, /var USERS = \[[\s\S]*?\];/))
+    throw new Error('Los usuarios del login no coinciden con gate.js (ZLT-WEB-V2): copiar SALT y USERS a src/js/gate-privacy.js');
+  const gate = mine.replace('__LOGO__', asset('logos/privacy-ai-studio-claro.png'))
+                   .replace('__BG__', asset('videos/fondo-hero-poster.webp'))
+                   .replace('__SHAPE__', asset('graficos/forma-cromada.webp'));
   html = html.replace('</title>', () => '</title>\n<script>' + gate + '</script>');
 }
 

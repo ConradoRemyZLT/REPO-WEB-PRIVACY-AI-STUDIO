@@ -77,12 +77,22 @@ def pdf_img(xref):
                 return Image.frombytes('RGBA' if pix.alpha else 'RGB', (pix.width, pix.height), pix.samples)
     raise SystemExit('No encontré la imagen %d en el brochure (¿cambió el PDF?)' % xref)
 
-png(trim(pdf_img(34)), out('logos', 'puzzle-ai.png'))      # wordmark Puzzle AI (blanco)
+png(trim(pdf_img(34)), out('logos', 'puzzle-ai.png'))      # wordmark Puzzle AI (blanco); la web usa puzzle-ai.svg (tools/puzzle_svg.py)
 png(trim(pdf_img(33)), out('logos', 'ialab-uba.png'))      # escudo UBA + IALAB (blanco)
 
 print('graficos')
 webp(fit(trim(pdf_img(504)), 1200), out('graficos', 'forma-cromada.webp'))
 webp(fit(trim(pdf_img(598)), 1600), out('graficos', 'cinta-seda.webp'))
+
+print('texturas claras (BrandBook)')
+bb = fitz.open(S('Manual de marca', 'BrandBook Privacy AI Studio.pdf'))
+def bb_img(xref):
+    pix = fitz.Pixmap(bb, xref)
+    if pix.n - pix.alpha > 3:
+        pix = fitz.Pixmap(fitz.csRGB, pix)
+    return Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
+webp(bb_img(228), out('graficos', 'textura-seda-clara.webp'), q=78)            # página 9: seda clara
+webp(fit(bb_img(234), 1400), out('graficos', 'textura-ondas-claras.webp'), q=78)  # página 10: ondas claras
 
 print('premios')
 # 1.png = Premio RIPD / AEPD 2025 · 2.png = 1° LatamDigital 2026. Se corta arriba del epígrafe.
